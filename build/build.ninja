@@ -63,7 +63,7 @@ build cmake_object_order_depends_target_unique_pointer: phony || CMakeFiles/uniq
 
 build CMakeFiles/unique_pointer.dir/unique_pointer.cpp.o: CXX_COMPILER__unique_pointer /home/jwkim/prac-cpp/smart_pointer/unique_pointer.cpp || cmake_object_order_depends_target_unique_pointer
   DEP_FILE = CMakeFiles/unique_pointer.dir/unique_pointer.cpp.o.d
-  FLAGS = -g   -std=gnu++11
+  FLAGS = -g   -std=gnu++17
   OBJECT_DIR = CMakeFiles/unique_pointer.dir
   OBJECT_FILE_DIR = CMakeFiles/unique_pointer.dir
 

@@ -55,5 +55,7 @@ int main(void)
     carList[0]->Print();
     carList[1]->Print();
 
+    carList.clear();
+    
     return 0;
 }

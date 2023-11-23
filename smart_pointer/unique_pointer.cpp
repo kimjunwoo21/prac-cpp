@@ -66,7 +66,9 @@ int main(void)
     // reset 원시 포인터 메모리 제거
     carList[0] = nullptr; // or carList[0].reset()
     carList[0] = std::make_unique<Car>("third car", 5.f, 6.f);
+    carList[0]->PrintPose();
 
+    carList[0].reset(new Car("third car", 55.f, 66.f));
     carList[0]->PrintPose();
 
     // 원시 포인터 가져오기

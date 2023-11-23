@@ -46,14 +46,20 @@ int main(void)
     
     // c++14
     std::vector<std::unique_ptr<Car>> carList;
-
     carList.reserve(2);
 
+    // 유니크 포인터를 이용한 Car 객체 생성 후 carList vector에 삽입
     carList.push_back(std::make_unique<Car>("first car"));
     carList.push_back(std::make_unique<Car>("second car"));
 
     carList[0]->Print();
     carList[1]->Print();
+
+    // reset 원시 포인터 메모리 제거
+    carList[0] = nullptr; // or carList[0].reset()
+    carList[0] = std::make_unique<Car>("third car");
+
+    carList[0]->Print();
 
     carList.clear();
     

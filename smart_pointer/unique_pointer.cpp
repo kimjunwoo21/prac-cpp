@@ -2,19 +2,27 @@
 #include <string>
 #include "unique_pointer.hpp"
 
-Car::Car(std::string name)
-    : mPos(new std::vector<float>())
-    , mName(name)
+Car::Car(const std::string name, const float x, const float y)
+    : mName(name)
+    , mX(x)
+    , mY(y)
 {
-    mPos->reserve(2); // the unique pointer mPos don't need destructor
-
-    mPos->push_back(0.0f);
-    mPos->push_back(0.0f);
 }
 
-void Car::Print(void)
+void Car::PrintName(void)
 {
     std::cout << mName << std::endl;
+}
+
+void Car::PrintPose(void)
+{
+    std::cout << mName << ": " << mX << ", " << mY << std::endl;
+}
+
+void Car::AddPos(const Car* other)
+{
+    mX += other->mX;
+    mY += other->mY;
 }
 
 int main(void)
@@ -46,20 +54,36 @@ int main(void)
     
     // c++14
     std::vector<std::unique_ptr<Car>> carList;
-    carList.reserve(2);
+    carList.reserve(3);
 
     // 유니크 포인터를 이용한 Car 객체 생성 후 carList vector에 삽입
-    carList.push_back(std::make_unique<Car>("first car"));
-    carList.push_back(std::make_unique<Car>("second car"));
+    carList.push_back(std::make_unique<Car>("first car", 1.f, 2.f));
+    carList.push_back(std::make_unique<Car>("second car", 3.f, 4.f));
 
-    carList[0]->Print();
-    carList[1]->Print();
+    carList[0]->PrintPose();
+    carList[1]->PrintPose();
 
     // reset 원시 포인터 메모리 제거
     carList[0] = nullptr; // or carList[0].reset()
-    carList[0] = std::make_unique<Car>("third car");
+    carList[0] = std::make_unique<Car>("third car", 5.f, 6.f);
 
-    carList[0]->Print();
+    carList[0]->PrintPose();
+
+    // 원시 포인터 가져오기
+    std::unique_ptr<Car> fourthCar = std::make_unique<Car>("fourth car", 10.f, 12.f);
+    carList[0]->AddPos(fourthCar.get());
+    carList[0]->PrintPose();
+
+    // 소유권을 포기
+    std::unique_ptr<Car> fifthCar = std::make_unique<Car>("fifth car", 20.f, 22.f);
+    Car* sixthCar = fifthCar.release();
+    sixthCar->PrintPose();
+
+    // 소유권 이전(stl 컨테이너에 유니크 포인터 요소를 추가하기 좋은 방법)
+    // const 유니크 포인터는 이전 불가
+    std::unique_ptr<Car> seventhCar = std::make_unique<Car>("seventh car", 30.f, 32.f);
+    carList.push_back(std::move(seventhCar)); // 이전 개체 seventhCar는 모든 멤버를 포기하고 소유권을 넘김
+    carList[2]->PrintPose();
 
     carList.clear();
     

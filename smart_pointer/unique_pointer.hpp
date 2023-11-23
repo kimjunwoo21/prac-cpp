@@ -6,13 +6,21 @@
 class Car
 {
 public:
-    Car(std::string name);
+    Car(const std::string name, const float x, const float y);
     
-    virtual ~Car() = default;
+    Car() = delete; // 기본 생성자 제거
+    Car(const Car& carInput) = delete; // 복사 생성자 제거
 
-    void Print(void);
+    virtual ~Car() = default; // 소멸자 내용 없음
+
+    void PrintName(void);
+    void PrintPose(void);
+
+    void AddPos(const Car* other);
 
 private:
-    std::unique_ptr<std::vector<float> > mPos;
     std::string mName;
+
+    float mX;
+    float mY;
 };

@@ -137,7 +137,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=unique_pointer
+CMAKE_PROJECT_NAME:STATIC=smart_pointer
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -202,10 +202,10 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-unique_pointer_BINARY_DIR:STATIC=/home/jwkim/prac-cpp/build
+smart_pointer_BINARY_DIR:STATIC=/home/jwkim/prac-cpp/build
 
 //Value Computed by CMake
-unique_pointer_SOURCE_DIR:STATIC=/home/jwkim/prac-cpp/smart_pointer
+smart_pointer_SOURCE_DIR:STATIC=/home/jwkim/prac-cpp
 
 
 ########################
@@ -290,7 +290,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/jwkim/prac-cpp/smart_pointer
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/jwkim/prac-cpp
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

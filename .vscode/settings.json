@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/jwkim/prac-cpp/smart_pointer",
+    "cmake.sourceDirectory": "/home/jwkim/prac-cpp",
     "files.associations": {
         "cctype": "cpp",
         "clocale": "cpp",

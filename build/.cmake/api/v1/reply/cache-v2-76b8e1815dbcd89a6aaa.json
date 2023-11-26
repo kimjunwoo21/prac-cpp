@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/jwkim/prac-cpp/smart_pointer"
+			"value" : "/home/jwkim/prac-cpp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -823,7 +823,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "unique_pointer"
+			"value" : "smart_pointer"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1106,7 +1106,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "unique_pointer_BINARY_DIR",
+			"name" : "smart_pointer_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1118,7 +1118,7 @@
 			"value" : "/home/jwkim/prac-cpp/build"
 		},
 		{
-			"name" : "unique_pointer_SOURCE_DIR",
+			"name" : "smart_pointer_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/jwkim/prac-cpp/smart_pointer"
+			"value" : "/home/jwkim/prac-cpp"
 		}
 	],
 	"kind" : "cache",

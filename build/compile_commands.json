@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/jwkim/prac-cpp/build",
-  "command": "/usr/bin/clang++-16    -g   -std=gnu++17 -o CMakeFiles/unique_pointer.dir/unique_pointer.cpp.o -c /home/jwkim/prac-cpp/smart_pointer/unique_pointer.cpp",
-  "file": "/home/jwkim/prac-cpp/smart_pointer/unique_pointer.cpp"
+  "command": "/usr/bin/clang++-16   -I../smart_pointer/weak_pointer  -g   -std=gnu++14 -o CMakeFiles/weak_pointer.dir/smart_pointer/weak_pointer/weak_pointer.cpp.o -c /home/jwkim/prac-cpp/smart_pointer/weak_pointer/weak_pointer.cpp",
+  "file": "/home/jwkim/prac-cpp/smart_pointer/weak_pointer/weak_pointer.cpp"
 }
 ]

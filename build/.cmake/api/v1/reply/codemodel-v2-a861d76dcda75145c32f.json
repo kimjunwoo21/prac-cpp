@@ -26,7 +26,7 @@
 					[
 						0
 					],
-					"name" : "unique_pointer",
+					"name" : "smart_pointer",
 					"targetIndexes" : 
 					[
 						0
@@ -37,9 +37,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "unique_pointer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-unique_pointer-Debug-d86390098cf44f6ce2d1.json",
-					"name" : "unique_pointer",
+					"id" : "weak_pointer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-weak_pointer-Debug-1bf7b5d7ac0c121d322a.json",
+					"name" : "weak_pointer",
 					"projectIndex" : 0
 				}
 			]
@@ -49,7 +49,7 @@
 	"paths" : 
 	{
 		"build" : "/home/jwkim/prac-cpp/build",
-		"source" : "/home/jwkim/prac-cpp/smart_pointer"
+		"source" : "/home/jwkim/prac-cpp"
 	},
 	"version" : 
 	{

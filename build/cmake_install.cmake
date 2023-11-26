@@ -1,4 +1,4 @@
-# Install script for directory: /home/jwkim/prac-cpp/smart_pointer
+# Install script for directory: /home/jwkim/prac-cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: unique_pointer
+# Project: smart_pointer
 # Configuration: Debug
 # =============================================================================
 # =============================================================================
@@ -22,7 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__unique_pointer
+rule CXX_COMPILER__weak_pointer
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/clang++-16  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -32,7 +32,7 @@ rule CXX_COMPILER__unique_pointer
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__unique_pointer
+rule CXX_EXECUTABLE_LINKER__weak_pointer
   command = $PRE_LINK && /usr/bin/clang++-16  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__unique_pointer
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -S/home/jwkim/prac-cpp/smart_pointer -B/home/jwkim/prac-cpp/build
+  command = /usr/bin/cmake -S/home/jwkim/prac-cpp -B/home/jwkim/prac-cpp/build
   description = Re-running CMake...
   generator = 1
 

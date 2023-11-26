@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "unique_pointer"
+			"path" : "weak_pointer"
 		}
 	],
 	"backtrace" : 1,
@@ -10,7 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -24,7 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 12,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -38,7 +45,14 @@
 					"fragment" : "-g  "
 				},
 				{
-					"fragment" : "-std=gnu++17"
+					"fragment" : "-std=gnu++14"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/jwkim/prac-cpp/smart_pointer/weak_pointer"
 				}
 			],
 			"language" : "CXX",
@@ -48,7 +62,7 @@
 			]
 		}
 	],
-	"id" : "unique_pointer::@6890427a1f51a3e7e1df",
+	"id" : "weak_pointer::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -64,8 +78,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "unique_pointer",
-	"nameOnDisk" : "unique_pointer",
+	"name" : "weak_pointer",
+	"nameOnDisk" : "weak_pointer",
 	"paths" : 
 	{
 		"build" : ".",
@@ -86,7 +100,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "unique_pointer.cpp",
+			"path" : "smart_pointer/weak_pointer/weak_pointer.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
